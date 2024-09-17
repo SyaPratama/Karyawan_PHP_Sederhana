@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',Verdana,sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.wrapper button{
+    border:none;
+    background: gray;   
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.wrapper button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.wrapper .table-contain{
+    margin: 20px auto;
+}
+
+.table-contain{
+    border-collapse: collapse;
+}
+
+.table-contain td{
+    padding: 10px;
+}
+
+.form-wrap{
+    margin: 5rem auto;
+    width: 370px;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.form-wrap h2{
+    color: #3a3a3a;
+}
+
+.wrap{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.wrap label{
+    font-size: 12px;
+    color: #3a3a3a;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+.wrap input{
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+#alamat{
+    resize: none;
+    height: 100px;
+}
+
+.form-wrap .add-btn{
+    margin: 10px 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.back{
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.pagination{
+    display: inline-flex;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: #3a3a3a;
+    width: 25px;
+    text-align: center;
+    padding: 0 5px;
+    border:1px solid black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pagination a.active{
+    color:#ff5252;
+}
