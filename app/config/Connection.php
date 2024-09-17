@@ -1,5 +1,5 @@
 <?php
-namespace config;
+namespace app\config;
 
 require_once "config.php";
 

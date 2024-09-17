@@ -1,8 +1,8 @@
 <?php
 
-require_once "model\Karyawan.php";
+require_once "../../model\Karyawan.php";
 
-use model\Karyawan;
+use app\model\Karyawan;
 
 if(isset($_GET["id"])){
     $karyawan = new Karyawan();

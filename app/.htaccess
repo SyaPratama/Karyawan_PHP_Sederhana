@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/tugas/app/?$ [NC]
+RewriteRule ^ /tugas/app/views/Karyawan [L]

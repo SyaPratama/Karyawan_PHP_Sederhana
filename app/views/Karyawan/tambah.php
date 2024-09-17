@@ -1,7 +1,7 @@
 <?php
-require_once 'model/Karyawan.php';
+require_once '../../model/Karyawan.php';
 
-use model\Karyawan;
+use app\model\Karyawan;
 
 $karyawan = new Karyawan();
 
@@ -13,7 +13,7 @@ if(isset($_POST["submit"])){
     }
 }
 ?>
-<?php require_once "template/header.php"; ?>
+<?php require_once "../template/header.php"; ?>
 <main class="container">
     <a href="<?=BASEURL?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
@@ -35,4 +35,4 @@ if(isset($_POST["submit"])){
         </form>
     </div>
 </main>
-<?php require_once "template/footer.php"; ?>
+<?php require_once "../template/footer.php"; ?>

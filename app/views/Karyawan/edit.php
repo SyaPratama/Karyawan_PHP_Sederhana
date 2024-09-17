@@ -1,7 +1,7 @@
 <?php
-require_once 'model/Karyawan.php';
+require_once '../../model/Karyawan.php';
 
-use model\Karyawan;
+use app\model\Karyawan;
 
 if (isset($_GET["id"])) {
 
@@ -29,7 +29,7 @@ if (isset($_GET["id"])) {
     exit;
 }
 ?>
-<?php require_once "template/header.php"; ?>
+<?php require_once "../template/header.php"; ?>
 <main class="container">
     <a href="<?= BASEURL ?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
@@ -54,4 +54,4 @@ if (isset($_GET["id"])) {
         <?php endforeach; ?>
     </div>
 </main>
-<?php require_once "template/footer.php"; ?>
+<?php require_once "../template/footer.php"; ?>

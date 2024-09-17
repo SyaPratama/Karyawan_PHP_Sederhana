@@ -1,9 +1,9 @@
 <?php
-namespace model;
+namespace app\model;
 
-require_once "config/Connection.php";
+require_once "../../config/Connection.php";
 
-use config\Connection;
+use app\config\Connection;
 
 class Karyawan{
 
