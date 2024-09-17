@@ -113,3 +113,19 @@ input::-webkit-inner-spin-button{
 .pagination a.active{
     color:#ff5252;
 }
+
+.link{
+    margin: 0 5px;
+}
+
+.edit-handle{
+    cursor: pointer;
+    color: #0ba1fe;
+    text-decoration: none;
+}
+
+.delete-handle{
+    cursor: pointer;
+    color: #f32020;
+    text-decoration: none;
+}

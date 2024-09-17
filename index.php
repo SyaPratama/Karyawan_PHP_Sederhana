@@ -26,6 +26,7 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
                         <td>NIK</td>
                         <td>NAMA</td>
                         <td>ALAMAT</td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +37,10 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
                             <td><?= $k["nik"] ?></td>
                             <td><?= $k["nama"] ?></td>
                             <td><?= $k["alamat"] ?></td>
+                            <td>
+                                <a class="link edit-handle" href="edit.php?id=<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-pen"></i></a>
+                                <a class="link delete-handle" href="delete.php?id=<?= hash('sha256', $k["id"]) ?>" onclick="return confirm('Apakah Anda Yakin?')"><i class="fa-solid fa-trash"></i></a>
+                            </td>
                         </tr>
 
                         <?php $i++; ?>
