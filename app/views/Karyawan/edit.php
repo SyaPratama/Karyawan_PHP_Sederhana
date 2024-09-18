@@ -30,7 +30,7 @@ if (isset($_GET["id"])) {
 }
 ?>
 <?php require_once "../template/header.php"; ?>
-<main class="container">
+<main class="containe contain">
     <a href="<?= BASEURL ?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
         <h2>Edit Karyawan</h2>

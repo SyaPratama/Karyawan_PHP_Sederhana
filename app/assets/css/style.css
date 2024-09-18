@@ -7,8 +7,9 @@
 }
 
 .wrapper{
-    text-align: center;
-    margin-top: 5rem;
+    width: 770px;
+    margin: 0 auto;
+    padding: 5rem 0;
 }
 
 .wrapper button{
@@ -16,6 +17,7 @@
     background: gray;   
     padding: 10px 15px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .wrapper button a{
@@ -28,6 +30,7 @@
 }
 
 .table-contain{
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -35,9 +38,23 @@
     padding: 10px;
 }
 
-.form-wrap{
-    margin: 5rem auto;
+.contain{
+    margin: auto;
     width: 370px;
+    height: auto;
+    padding: 5rem 0;
+}
+
+.back{
+    color: #3a3a3a;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.form-wrap{
+    margin-top: 10px;
+    width: 100%;
     box-shadow: 1px 1px 10px 1px rgba(0,0,0,.1);
     padding: 25px;
     border-radius: 10px;
@@ -86,15 +103,6 @@ input::-webkit-inner-spin-button{
     font-weight: 600;
 }
 
-.back{
-    position: absolute;
-    top: 50px;
-    left: 45%;
-    text-decoration: none;
-    color: #3a3a3a;
-    font-weight: 600;
-}
-
 .pagination{
     display: inline-flex;
 }
@@ -128,4 +136,9 @@ input::-webkit-inner-spin-button{
     cursor: pointer;
     color: #f32020;
     text-decoration: none;
+}
+
+.wrap-pagination{
+    width: 100%;
+    text-align: center;
 }

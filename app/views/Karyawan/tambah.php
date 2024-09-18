@@ -14,7 +14,7 @@ if(isset($_POST["submit"])){
 }
 ?>
 <?php require_once "../template/header.php"; ?>
-<main class="container">
+<main class="container contain">
     <a href="<?=BASEURL?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
         <h2>Tambah Karyawan</h2>
