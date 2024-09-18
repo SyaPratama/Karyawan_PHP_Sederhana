@@ -4,6 +4,9 @@ require_once '../../model/Karyawan.php';
 use app\model\Karyawan;
 
 $karyawan = new Karyawan();
+if(isset($_POST["reload"])){
+    $result = $karyawan->getKaryawan();
+}
 $result = $karyawan->getKaryawan();
 $maxPage = 25;
 $totalData = count($result);

@@ -22,9 +22,10 @@ $(".delete-handle").on("click", function () {
           showConfirmButton:false,
           timer:1500
         });
+
         setTimeout(() => {
-          window.location.reload();
-        }, 1500);
+            window.location.href = "http://localhost/tugas/app/views/Karyawan/";
+        },2000);
       });
     }
   });
