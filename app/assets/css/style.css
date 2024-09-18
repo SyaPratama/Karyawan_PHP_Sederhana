@@ -76,7 +76,6 @@
 
 .table-contain tbody tr.ganjil td{
     background: #bcbcbc;
-    color:#fff;
 }
 
 .table-contain tbody tr td:last-child{
@@ -84,7 +83,7 @@
 }
 
 .table-contain td{
-    color: #515151;
+    color: #292929;
 }
 
 .form-wrap{
@@ -127,6 +126,7 @@ input::-webkit-inner-spin-button{
 }
 
 #alamat{
+    outline: none;
     resize: none;
     height: 100px;
 }
@@ -148,13 +148,13 @@ input::-webkit-inner-spin-button{
     width: 25px;
     text-align: center;
     padding: 0 5px;
-    border:1px solid black;
+    border:1px solid #979797;
     font-size: 15px;
     font-weight: 600;
 }
 
 .pagination a.active{
-    color:#ff5252;
+    color:#013286;
 }
 
 .link{

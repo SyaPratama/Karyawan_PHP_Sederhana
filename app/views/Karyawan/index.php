@@ -30,11 +30,7 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
             <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($result as $k) : ?>
-                    <?php if ($i % 2 !== 0) : ?>
-                        <tr class="ganjil">
-                        <?php else : ?>
-                        <tr>
-                        <?php endif; ?>
+                        <tr <?= $i % 2 !== 0 ? "class=ganjil" : '' ?>>
                             <td><?= $i ?></td>
                             <td><?= $k["nik"] ?></td>
                             <td><?= $k["nama"] ?></td>
