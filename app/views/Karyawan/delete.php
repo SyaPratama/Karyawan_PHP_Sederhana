@@ -4,10 +4,10 @@ require_once "../../model\Karyawan.php";
 
 use app\model\Karyawan;
 
-if(isset($_GET["id"])){
+if(isset($_POST["id"])){
     $karyawan = new Karyawan();
     $result = $karyawan->getKaryawan();
-    $findId = array_filter($result,fn($data) => hash('sha256',$data["id"]) == $_GET["id"]);
+    $findId = array_filter($result,fn($data) => hash('sha256',$data["id"]) == $_POST["id"]);
     if(count($findId) > 0){
         foreach($findId as $k){
             $karyawan->deleteKaryawan($k["id"]);

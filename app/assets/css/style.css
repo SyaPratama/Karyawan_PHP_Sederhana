@@ -14,15 +14,29 @@
 
 .wrapper button{
     border:none;
-    background: gray;   
+    background: #4d4d4d;   
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .wrapper button a{
     text-decoration: none;
     color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper button:hover,
+.wrapper button:hover a{
+    background: #979797;
+    color: #333333;
+    transform: translateY(-3px) scale(1.05);
+}
+
+.wrapper button:hover a{
+    background: none;
 }
 
 .wrapper .table-contain{
@@ -32,6 +46,7 @@
 .table-contain{
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid #cbcbcb;
 }
 
 .table-contain td{
@@ -50,6 +65,26 @@
     text-decoration: none;
     font-weight: 600;
     margin-left: 5px;
+}
+
+.table-contain thead td{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: #013286;
+}
+
+.table-contain tbody tr.ganjil td{
+    background: #bcbcbc;
+    color:#fff;
+}
+
+.table-contain tbody tr td:last-child{
+    text-align: center;
+}
+
+.table-contain td{
+    color: #515151;
 }
 
 .form-wrap{
@@ -128,13 +163,13 @@ input::-webkit-inner-spin-button{
 
 .edit-handle{
     cursor: pointer;
-    color: #0ba1fe;
+    color: #013286;
     text-decoration: none;
 }
 
 .delete-handle{
     cursor: pointer;
-    color: #f32020;
+    color: #013286;
     text-decoration: none;
 }
 

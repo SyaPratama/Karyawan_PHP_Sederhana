@@ -24,25 +24,29 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
                     <td>NIK</td>
                     <td>NAMA</td>
                     <td>ALAMAT</td>
-                    <td></td>
+                    <td>Action</td>
                 </tr>
             </thead>
             <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($result as $k) : ?>
-                    <tr>
-                        <td><?= $i ?></td>
-                        <td><?= $k["nik"] ?></td>
-                        <td><?= $k["nama"] ?></td>
-                        <td><?= $k["alamat"] ?></td>
-                        <td>
-                            <a class="link edit-handle" href="edit.php?id=<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-pen"></i></a>
-                            <a class="link delete-handle" href="delete.php?id=<?= hash('sha256', $k["id"]) ?>" onclick="return confirm('Apakah Anda Yakin?')"><i class="fa-solid fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    <?php if ($i % 2 !== 0) : ?>
+                        <tr class="ganjil">
+                        <?php else : ?>
+                        <tr>
+                        <?php endif; ?>
+                            <td><?= $i ?></td>
+                            <td><?= $k["nik"] ?></td>
+                            <td><?= $k["nama"] ?></td>
+                            <td><?= $k["alamat"] ?></td>
+                            <td>
+                                <a class="link edit-handle" href="edit.php?id=<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-pen"></i></a>
+                                <a class="link delete-handle" data-id="<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
 
-                    <?php $i++; ?>
-                <?php endforeach; ?>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
             </tbody>
         </table>
         <div class="wrap-pagination">
