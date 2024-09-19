@@ -7,7 +7,7 @@
 }
 
 .wrapper{
-    width: 770px;
+    width: 80%;
     margin: 0 auto;
     padding: 5rem 0;
 }
@@ -46,11 +46,20 @@
 .table-contain{
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     border: 1px solid #cbcbcb;
 }
 
 .table-contain td{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     padding: 10px;
+}
+
+.table-contain td:first-child{
+    width: 50px;
+    text-align: center;
 }
 
 .contain{
@@ -206,7 +215,7 @@ input::-webkit-inner-spin-button{
     color: #fff;
     font-size: 24px;
     text-transform: capitalize;
-    width: 770px;
+    width: 80%;
     height: 50px;
     background: #40ff2fbb;
 }
