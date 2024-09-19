@@ -1,24 +1,9 @@
-<?php
-require_once '../../model/Karyawan.php';
-
-use app\model\Karyawan;
-
-$karyawan = new Karyawan();
-
-if(isset($_POST["submit"])){
-    $result = $karyawan->post($_POST);
-    if($result > 0){
-        header('Location: '.BASEURL);
-        exit;
-    }
-}
-?>
 <?php require_once "../template/header.php"; ?>
 <main class="container contain">
     <a href="<?=BASEURL?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
         <h2>Tambah Karyawan</h2>
-        <form action="" method="POST">
+        <form action="add-logic.php" id="form-add" method="POST">
             <div class="wrap">
                 <label for="nama">Nama</label>
                 <input type="text" id="nama" name="nama" required>
@@ -31,7 +16,7 @@ if(isset($_POST["submit"])){
                 <label for="alamat">Alamat</label>
                 <textarea name="alamat" id="alamat" required></textarea >
             </div>
-            <button type="submit" name="submit" class="add-btn">Tambah</button>
+            <button type="submit" class="add-btn">Tambah</button>
         </form>
     </div>
 </main>
