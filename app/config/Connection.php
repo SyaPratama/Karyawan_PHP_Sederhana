@@ -26,11 +26,11 @@ class Connection{
     }
 
 
-    public function query($sql){
+    public function query( string $sql) : void{
         $this->stmt =  $this->dbh->prepare($sql);
     }
 
-    public function bind($param,$value,$type = null){
+    public function bind( string $param, mixed $value, null $type = null) : void{
         if(is_null($type)){
             switch(true){
                 case is_int($value):
@@ -50,21 +50,21 @@ class Connection{
         $this->stmt->bindParam($param,$value,$type);
     }
 
-    public function execute(){
+    public function execute() : void{
         $this->stmt->execute();
     }
 
-    public function fetch(){
+    public function fetch() : Array{
         $this->execute();
        return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function fetchAll(){
+    public function fetchAll() : Array{
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function rowCount(){
+    public function rowCount() : int {
         return $this->stmt->rowCount();
     }
 }
