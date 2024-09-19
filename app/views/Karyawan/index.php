@@ -1,10 +1,11 @@
 <?php
+session_start();
 require_once '../../model/Karyawan.php';
 
 use app\model\Karyawan;
 
 $karyawan = new Karyawan();
-if(isset($_POST["reload"])){
+if (isset($_POST["reload"])) {
     $result = $karyawan->get();
 }
 $result = $karyawan->get();
@@ -17,6 +18,13 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
 ?>
 
 <?php require_once "../template/header.php"; ?>
+<?php if (isset($_SESSION["update"])) : ?>
+    <div class="success">
+        <?= $_SESSION["update"] ?>
+        <?php unset($_SESSION["update"]) ?>
+    </div>
+<?php endif; ?>
+
 <main class="container">
     <div class="wrapper">
         <button class=""><a href="tambah.php">Tambah Karyawan</a></button>
@@ -33,19 +41,19 @@ $result = $karyawan->pageKaryawan($first_page, $maxPage);
             <tbody>
                 <?php $i = 1; ?>
                 <?php foreach ($result as $k) : ?>
-                        <tr <?= $i % 2 !== 0 ? "class=ganjil" : '' ?>>
-                            <td><?= $i ?></td>
-                            <td><?= $k["nik"] ?></td>
-                            <td><?= $k["nama"] ?></td>
-                            <td><?= $k["alamat"] ?></td>
-                            <td>
-                                <a class="link edit-handle" href="edit.php?id=<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-pen"></i></a>
-                                <a class="link delete-handle" data-id="<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-trash"></i></a>
-                            </td>
-                        </tr>
+                    <tr <?= $i % 2 !== 0 ? "class=ganjil" : '' ?>>
+                        <td><?= $i ?></td>
+                        <td><?= $k["nik"] ?></td>
+                        <td><?= $k["nama"] ?></td>
+                        <td><?= $k["alamat"] ?></td>
+                        <td>
+                            <a class="link edit-handle" href="edit.php?id=<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-pen"></i></a>
+                            <a class="link delete-handle" data-id="<?= hash('sha256', $k["id"]) ?>"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
 
-                        <?php $i++; ?>
-                    <?php endforeach; ?>
+                    <?php $i++; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <div class="wrap-pagination">
