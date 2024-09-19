@@ -7,7 +7,7 @@ if (isset($_GET["id"])) {
 
     $karyawan = new Karyawan();
 
-    $matchKaryawan = $karyawan->getKaryawan();
+    $matchKaryawan = $karyawan->get();
 
     $findId = array_filter($matchKaryawan, fn($data) => hash('sha256', $data["id"]) == $_GET["id"]);
 
@@ -16,7 +16,7 @@ if (isset($_GET["id"])) {
         exit;
     } else {
         if (isset($_POST["edit"])) {
-            $result = $karyawan->editKaryawan($_POST);
+            $result = $karyawan->update($_POST);
             var_dump($result);
             if ($result > 0) {
                 header('Location: ' . BASEURL);

@@ -5,9 +5,9 @@ use app\model\Karyawan;
 
 $karyawan = new Karyawan();
 if(isset($_POST["reload"])){
-    $result = $karyawan->getKaryawan();
+    $result = $karyawan->get();
 }
-$result = $karyawan->getKaryawan();
+$result = $karyawan->get();
 $maxPage = 25;
 $totalData = count($result);
 $totalPage = ceil($totalData / $maxPage);

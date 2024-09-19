@@ -17,19 +17,19 @@ if(isset($_POST["submit"])){
 <main class="container contain">
     <a href="<?=BASEURL?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
-        <h2>Tambah Karyawan</h2>
+        <h2>Tambah Nilai</h2>
         <form action="" method="POST">
             <div class="wrap">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" required>
+                <label for="nama"></label>
+                <input type="text" inputmode="numeric" id="nama" name="nama" required>
             </div>
             <div class="wrap">
                 <label for="nik">Nik</label>
-                <input type="text" id="nik" name="nik" inputmode="numeric" minlength="16" maxlength="16" required>
+                <input type="text" inputmode="numeric" id="nik" name="nik" inputmode="numeric" minlength="16" maxlength="16" required>
             </div>
             <div class="wrap">
                 <label for="alamat">Alamat</label>
-                <textarea name="alamat" id="alamat" required></textarea >
+                <input type="text" inputmode="numeric" id="nik" name="nik" inputmode="numeric" minlength="16" maxlength="16" required>
             </div>
             <button type="submit" name="submit" class="add-btn">Tambah</button>
         </form>

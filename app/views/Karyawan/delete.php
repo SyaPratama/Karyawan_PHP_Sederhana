@@ -6,11 +6,11 @@ use app\model\Karyawan;
 
 if(isset($_POST["id"])){
     $karyawan = new Karyawan();
-    $result = $karyawan->getKaryawan();
+    $result = $karyawan->get();
     $findId = array_filter($result,fn($data) => hash('sha256',$data["id"]) == $_POST["id"]);
     if(count($findId) > 0){
         foreach($findId as $k){
-            $karyawan->deleteKaryawan($k["id"]);
+            $karyawan->delete($k["id"]);
             header("Location: ".BASEURL,true);
             exit;
         }
