@@ -12,7 +12,7 @@ $(".delete-handle").on("click", function () {
       const id = $(this).data("id");
       $.ajax({
         type: "POST",
-        url: "http://localhost/tugas/app/views/Karyawan/delete.php",
+        url: "http://localhost/tugas/app/views/Karyawan/delete-logic.php",
         data: { id: id },
       }).done(function () {
         Swal.fire({
@@ -30,3 +30,40 @@ $(".delete-handle").on("click", function () {
     }
   });
 });
+
+
+$("#form-edit").on('submit',function(e){
+  e.preventDefault();
+  const form = $(this);
+  Swal.fire({
+    title: "Apakaj Kamu Ingin Update?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Update",
+  }).then((res) => {
+    if(res.isConfirmed){
+      form.off('submit');
+      form.submit();
+    }
+  })
+});
+
+$('#form-add').on('submit',function(e){
+  e.preventDefault();
+  const form = $(this);
+  Swal.fire({
+    title: "Apakah Kamu Ingin Menambah?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Tambah",
+  }).then((res) => {
+    if(res.isConfirmed){
+      form.off('submit');
+      form.submit();
+    }
+  })
+})
