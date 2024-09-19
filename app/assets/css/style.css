@@ -87,7 +87,8 @@
     background: #bcbcbc;
 }
 
-.table-contain tbody tr td:last-child{
+.table-contain td:last-child{
+    width: 100px;
     text-align: center;
 }
 
