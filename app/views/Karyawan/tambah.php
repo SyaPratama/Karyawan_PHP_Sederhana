@@ -1,4 +1,17 @@
-<?php require_once "../template/header.php"; ?>
+<?php
+session_start();
+
+require_once "../template/header.php"; 
+?>
+
+
+<?php if(isset($_SESSION["alert"])) : ?>
+    <div class="alert">
+        <?= $_SESSION["alert"] ?>
+    </div>
+    <?php unset($_SESSION["alert"]) ?>
+<?php endif; ?>
+
 <main class="container contain">
     <a href="<?=BASEURL?>" class="back">Back To Home</a>
     <div class="wrapper form-wrap">
